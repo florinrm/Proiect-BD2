@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ProiectBD2 {
-    public class DatabaseAdmin {
+    /// <summary>
+    /// Class used for database connection
+    /// </summary>
+    public class DatabaseAdmin
+    {
     }
 }
