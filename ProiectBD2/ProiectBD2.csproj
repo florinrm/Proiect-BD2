@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseAdmin.cs" />
     <Compile Include="FirstPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppPage.resx">
+      <DependentUpon>AppPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateNewAccount.resx">
       <DependentUpon>CreateNewAccount.cs</DependentUpon>
     </EmbeddedResource>

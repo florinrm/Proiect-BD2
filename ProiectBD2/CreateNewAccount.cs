@@ -37,6 +37,7 @@ namespace ProiectBD2
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@user", textBox1.Text));
                     cmd.Parameters.Add(new SqlParameter("@pass", textBox2.Text));
+                    cmd.Parameters.Add(new SqlParameter("@budget", 8000));
 
                     try
                     {
