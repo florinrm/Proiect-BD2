@@ -63,8 +63,20 @@
     <Compile Include="CreateNewAccount.Designer.cs">
       <DependentUpon>CreateNewAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemsCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemsCollection.Designer.cs">
+      <DependentUpon>ItemsCollection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WishlistCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WishlistCollection.Designer.cs">
+      <DependentUpon>WishlistCollection.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AppPage.resx">
       <DependentUpon>AppPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FirstPage.resx">
       <DependentUpon>FirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemsCollection.resx">
+      <DependentUpon>ItemsCollection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +98,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WishlistCollection.resx">
+      <DependentUpon>WishlistCollection.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
