@@ -1,5 +1,5 @@
 ﻿namespace ProiectBD2 {
-    partial class Form1 {
+    partial class FirstPage {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -90,6 +90,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Create new account";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -101,7 +102,7 @@
             this.label3.TabIndex = 6;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // Form1
+            // FirstPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,7 +114,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "FirstPage";
             this.Text = "Music Shop";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

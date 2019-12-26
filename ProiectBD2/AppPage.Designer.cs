@@ -1,6 +1,6 @@
 ﻿namespace ProiectBD2
 {
-    partial class Form2
+    partial class AppPage
     {
         /// <summary>
         /// Required designer variable.

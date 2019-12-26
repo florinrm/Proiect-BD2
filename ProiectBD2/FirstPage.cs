@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProiectBD2 {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class FirstPage : Form {
+        public FirstPage() {
             InitializeComponent();
         }
 
@@ -33,8 +33,11 @@ namespace ProiectBD2 {
             {
 
                 conn.Open();
-                using (SqlCommand cmd = new SqlCommand("select * from Users", conn))
+                using (SqlCommand cmd = new SqlCommand("loginUser", conn))
                 {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@user", textBox1.Text));
+                    cmd.Parameters.Add(new SqlParameter("@pass", textBox2.Text));
 
                     SqlDataReader rdr = null;
                     rdr = cmd.ExecuteReader();
@@ -54,7 +57,7 @@ namespace ProiectBD2 {
 
             if (doesExist)
             {
-                new Form2().Show();
+                new AppPage().Show();
             } else
             {
                 label3.Text = "Invalid credentials";
@@ -64,6 +67,11 @@ namespace ProiectBD2 {
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new CreateNewAccount().Show();
         }
     }
 }
