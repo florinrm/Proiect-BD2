@@ -26,6 +26,7 @@ namespace ProiectBD2 {
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string user = null;
             bool doesExist = false;
             // check if user exists in data base
             using (var conn =
@@ -44,7 +45,7 @@ namespace ProiectBD2 {
 
                     if (rdr.Read())
                     {
-                        var user = rdr[0].ToString();
+                        user = rdr[0].ToString();
                         var pass = rdr[1].ToString();
 
                         if (user.Equals(textBox1.Text) && pass.Equals(textBox2.Text))
@@ -57,7 +58,9 @@ namespace ProiectBD2 {
 
             if (doesExist)
             {
-                new AppPage().Show();
+                var page = new AppPage();
+                page.User = user;
+                page.Show();
             } else
             {
                 label3.Text = "Invalid credentials";
