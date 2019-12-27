@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,46 +37,15 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11});
-            this.listView2.Location = new System.Drawing.Point(90, 447);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(944, 248);
-            this.listView2.TabIndex = 12;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Name";
-            this.columnHeader7.Width = 140;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Artist";
-            this.columnHeader8.Width = 140;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Genre";
-            this.columnHeader9.Width = 120;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Price";
-            this.columnHeader10.Width = 120;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Product ID";
-            this.columnHeader11.Width = 120;
             // 
             // listView1
             // 
@@ -149,6 +112,63 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Albums";
             // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader12,
+            this.columnHeader9,
+            this.columnHeader13,
+            this.columnHeader10,
+            this.columnHeader11});
+            this.listView2.Location = new System.Drawing.Point(33, 447);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(1079, 248);
+            this.listView2.TabIndex = 12;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Name";
+            this.columnHeader7.Width = 140;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Artist";
+            this.columnHeader8.Width = 140;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.DisplayIndex = 5;
+            this.columnHeader12.Text = "Album";
+            this.columnHeader12.Width = 120;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.DisplayIndex = 2;
+            this.columnHeader9.Text = "Genre";
+            this.columnHeader9.Width = 120;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.DisplayIndex = 6;
+            this.columnHeader13.Text = "Year";
+            this.columnHeader13.Width = 40;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.DisplayIndex = 3;
+            this.columnHeader10.Text = "Price";
+            this.columnHeader10.Width = 120;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.DisplayIndex = 4;
+            this.columnHeader11.Text = "Product ID";
+            this.columnHeader11.Width = 120;
+            // 
             // ItemsCollection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -160,19 +180,13 @@
             this.Controls.Add(this.label1);
             this.Name = "ItemsCollection";
             this.Text = "ItemsCollection";
+            this.Load += new System.EventHandler(this.ItemsCollection_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -182,5 +196,13 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
     }
 }

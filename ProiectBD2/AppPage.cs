@@ -93,7 +93,9 @@ namespace ProiectBD2
         /// </summary>
         private void button5_Click(object sender, EventArgs e)
         {
-            new ItemsCollection().Show();
+            var page = new ItemsCollection();
+            page.User = User;
+            page.Show();
         }
 
         /// <summary> 
@@ -101,7 +103,9 @@ namespace ProiectBD2
         /// </summary>
         private void button6_Click(object sender, EventArgs e)
         {
-            new WishlistCollection().Show();
+            var page = new WishlistCollection();
+            page.User = User;
+            page.Show();
         }
 
         /// <summary> 
@@ -321,7 +325,7 @@ namespace ProiectBD2
                             {
                                 var rdr = cmd.ExecuteNonQuery();
                             }
-                            catch (SqlException ex)
+                            catch (SqlException)
                             {
                                 MessageBox.Show("Budget cannot be updated");
                             }
