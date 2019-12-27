@@ -148,7 +148,7 @@ namespace ProiectBD2
 
                     int userBudget = -1;
 
-                    using (SqlCommand cmd = new SqlCommand("findBudgetUser", conn))
+                    using (SqlCommand cmd = new SqlCommand("findUserBudget", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add(new SqlParameter("@user", User));
@@ -294,7 +294,7 @@ namespace ProiectBD2
 
                     int userBudget = -1;
 
-                    using (SqlCommand cmd = new SqlCommand("findBudgetUser", conn))
+                    using (SqlCommand cmd = new SqlCommand("findUserBudget", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add(new SqlParameter("@user", User));
